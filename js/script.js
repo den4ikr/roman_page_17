@@ -1,0 +1,22 @@
+$(document).ready(function(){
+	$(".slider").slick({
+		arrows:true,
+		responsive:[
+			{
+				breakpoint:768,
+				settings: {
+					slidesToShow:1,
+					arrows:false,
+					centerMode:false,
+				}
+			}	
+		]
+	})
+	$(".header__burger").click(function(event){
+		$(".header__list").toggleClass("active");
+		$(".header__menu-block-body").toggleClass("active");
+		$(".header__main-title").toggleClass("active");
+		$(".header__main-img").toggleClass("active");
+		$("body").toggleClass("lock");
+	})
+})
